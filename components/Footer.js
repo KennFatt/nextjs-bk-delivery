@@ -13,20 +13,24 @@ export default function Footer() {
         <p className="font-primary text-xl">BURGER KING® DELIVERY</p>
 
         {/* Phone */}
-        <a className="font-primary text-xl block" href="tel:1234567">
-          <span>
-            <PhoneIcon className="w-6 h-6 inline mr-2" />
-          </span>
-          15000 25
-        </a>
+        <p>
+          <a className="font-primary text-xl" href="tel:1234567">
+            <span>
+              <PhoneIcon className="w-6 h-6 inline mr-2" />
+            </span>
+            15000 25
+          </a>
+        </p>
 
         {/* Email */}
-        <a className="block" href="mailto:dummy@example.com">
-          <span>
-            <MailIcon className="w-6 h-6 inline mr-2" />
-          </span>
-          guestservice@burgerking.co.id
-        </a>
+        <p>
+          <a href="mailto:dummy@example.com">
+            <span>
+              <MailIcon className="w-6 h-6 inline mr-2" />
+            </span>
+            guestservice@burgerking.co.id
+          </a>
+        </p>
 
         {/* Socials */}
         <ul>
