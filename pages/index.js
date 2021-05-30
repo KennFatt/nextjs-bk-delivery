@@ -10,18 +10,16 @@ export default function Home() {
       <NavBar />
 
       {/* Item Grid */}
-      <main className="px-2 mx-auto bg-branding-light">
-        {/* Title Text */}
+      <main className="min-h-screen w-full bg-branding-light mx-auto max-w-5xl">
         <h3 className="text-2xl text-center py-7 font-primary text-branding-accent-secondary">
           OUR MENUS
         </h3>
 
-        {/* Item grid */}
-        <div className="flex flex-wrap justify-between pb-7">
-          {getProductCategories().map(({ id, name, thumbnailUrl }, idx) => (
+        <section className="min-h-screen w-full max-w-md mx-auto grid grid-cols-2 gap-3 lg:gap-4 lg:grid-cols-3 lg:max-w-5xl px-4 xs:px-0 pb-7">
+          {getProductCategories().map(({ id, name, thumbnailUrl }) => (
             <DisplayCard key={id} title={name} imageSrc={thumbnailUrl} />
           ))}
-        </div>
+        </section>
       </main>
 
       {/* Footer */}

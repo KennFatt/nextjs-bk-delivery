@@ -3,3 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes TopToBottom {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes BottomToTop {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: -100%;
+    opacity: 0;
+  }
+}
