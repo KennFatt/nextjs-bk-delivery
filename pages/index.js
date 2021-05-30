@@ -1,11 +1,12 @@
-import DisplayCard from "../components/DisplayCard";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import { getProductCategories } from "../lib/utils";
+import DisplayCard from "@/components/DisplayCard";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import { getProductCategories } from "@/lib/utils";
 
 export default function Home() {
   return (
     <>
+      {/* Top Navigtion Bar */}
       <NavBar />
 
       {/* Item Grid */}
@@ -23,6 +24,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Footer */}
       <Footer />
     </>
   );

@@ -1,16 +1,14 @@
 import Link from "next/link";
 
-import HamburgerMenuIcon from "@/vectors/hamburger-menu.svg";
-import ShoppingCartIcon from "@/vectors/shopping-cart.svg";
+import HamburgerMenu from "./HamburgerMenu";
+import ShoppingCart from "./ShoppingCart";
 
 export default function NavBar() {
   return (
     <header className="sticky top-0">
       <nav className="flex items-center justify-between shadow-lg h-13 bg-branding-dark">
         {/* Hamburger Button */}
-        <div className="flex items-center justify-center h-full w-13 cursor-pointer">
-          <HamburgerMenuIcon className="w-7 h-7 text-branding-accent-primary-darker" />
-        </div>
+        <HamburgerMenu />
 
         {/* Branding Logo */}
         <Link href="/">
@@ -22,9 +20,7 @@ export default function NavBar() {
         </Link>
 
         {/* Shopping Cart */}
-        <div className="flex items-center justify-center h-full w-13 bg-branding-accent-primary-darker cursor-pointer">
-          <ShoppingCartIcon className="w-8 h-8 text-white" />
-        </div>
+        <ShoppingCart />
       </nav>
     </header>
   );

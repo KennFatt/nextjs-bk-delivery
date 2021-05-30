@@ -1,6 +1,4 @@
-export default function DisplayCard(props) {
-  const { title, imageSrc } = props;
-
+export default function DisplayCard({ title, imageSrc }) {
   return (
     <div className="w-56 mx-1 my-1 overflow-hidden bg-white shadow-xl rounded-xl cursor-pointer">
       {/* Image */}
