@@ -8,72 +8,83 @@ import YouTubeIcon from "@/vectors/youtube.svg";
 export default function Footer() {
   return (
     <footer className="bg-branding-dark">
-      <div className="mx-auto px-16 text-center text-white py-7 space-y-4 text-md font-secondary">
+      <div className="mx-auto w-full max-w-5xl px-16 lg:px-0 text-white py-7 space-y-6 lg:space-y-4 font-secondary flex flex-col items-center lg:items-start">
         {/* Copyright */}
-        <p className="font-primary text-xl">BURGER KING® DELIVERY</p>
+        <p className="font-primary text-xl lg:text-base">
+          BURGER KING® DELIVERY
+        </p>
 
-        {/* Phone */}
-        <p>
-          <a className="font-primary text-xl" href="tel:1234567">
-            <span>
-              <PhoneIcon className="w-6 h-6 inline mr-2" />
-            </span>
-            15000 25
+        {/* Contact */}
+        <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 items-center lg:items-start">
+          {/* Phone */}
+          <p>
+            <a className="font-primary text-xl lg:text-base" href="tel:1234567">
+              <span>
+                <PhoneIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mr-2" />
+              </span>
+              15000 25
+            </a>
+          </p>
+
+          {/* Email */}
+          <p>
+            <a href="mailto:dummy@example.com">
+              <span>
+                <MailIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mr-2" />
+              </span>
+              guestservice@burgerking.co.id
+            </a>
+          </p>
+
+          {/* Socials */}
+          <ul>
+            <li className="inline">
+              <a href="#facebook">
+                <FacebookIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+              </a>
+            </li>
+
+            <li className="inline">
+              <a href="#instagram">
+                <InstagramIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+              </a>
+            </li>
+
+            <li className="inline">
+              <a href="#twitter">
+                <TwitterIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+              </a>
+            </li>
+
+            <li className="inline">
+              <a href="#youtube">
+                <YouTubeIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 items-center lg:text-sm lg:text-gray-500">
+          {/* Privacy Policy */}
+          <a className="block" href="#kebijakan-privasi">
+            Kebijakan Privasi
           </a>
-        </p>
 
-        {/* Email */}
-        <p>
-          <a href="mailto:dummy@example.com">
-            <span>
-              <MailIcon className="w-6 h-6 inline mr-2" />
-            </span>
-            guestservice@burgerking.co.id
+          <span className="hidden lg:inline">|</span>
+
+          {/* Terms of Service */}
+          <a className="block" href="#tos">
+            Syarat dan Ketentuan
           </a>
-        </p>
 
-        {/* Socials */}
-        <ul>
-          <li className="inline">
-            <a href="#facebook">
-              <FacebookIcon className="w-6 h-6 inline mx-2" />
-            </a>
-          </li>
+          <span className="hidden lg:inline">|</span>
 
-          <li className="inline">
-            <a href="#instagram">
-              <InstagramIcon className="w-6 h-6 inline mx-2" />
-            </a>
-          </li>
-
-          <li className="inline">
-            <a href="#twitter">
-              <TwitterIcon className="w-6 h-6 inline mx-2" />
-            </a>
-          </li>
-
-          <li className="inline">
-            <a href="#youtube">
-              <YouTubeIcon className="w-6 h-6 inline mx-2" />
-            </a>
-          </li>
-        </ul>
-
-        {/* Privacy Policy */}
-        <a className="block" href="#kebijakan-privasi">
-          Kebijakan Privasi
-        </a>
-
-        {/* Terms of Service */}
-        <a className="block" href="#tos">
-          Syarat dan Ketentuan
-        </a>
-
-        {/* Trademark */}
-        <p className="text-gray-500">
-          TM & © 2021 Burger King Corporation. Used Under License. All rights
-          reserved.
-        </p>
+          {/* Trademark */}
+          <p className="text-gray-500 text-center">
+            TM & © 2021 Burger King Corporation. Used Under License. All rights
+            reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
