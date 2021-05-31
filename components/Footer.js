@@ -8,9 +8,9 @@ import YouTubeIcon from "@/vectors/youtube.svg";
 export default function Footer() {
   return (
     <footer className="bg-branding-dark">
-      <div className="mx-auto w-full max-w-5xl px-16 lg:px-0 text-white py-7 space-y-6 lg:space-y-4 font-secondary flex flex-col items-center lg:items-start">
+      <div className="mx-auto w-full max-w-5xl px-8 lg:px-0 text-white py-7 space-y-6 lg:space-y-4 font-secondary flex flex-col items-center lg:items-start">
         {/* Copyright */}
-        <p className="font-primary text-xl lg:text-base">
+        <p className="font-primary text-center text-xl lg:text-base">
           BURGER KING® DELIVERY
         </p>
 
