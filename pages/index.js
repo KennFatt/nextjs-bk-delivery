@@ -10,7 +10,7 @@ export default function Home() {
       <NavBar />
 
       {/* Item Grid */}
-      <main className="w-full max-w-5xl min-h-screen mx-auto bg-branding-light sm:px-7 pb-7 lg:pb-11">
+      <main className="min-h-screen center-container bg-branding-light pb-7 lg:pb-11">
         <h3 className="text-2xl text-center py-7 font-primary text-branding-accent-secondary">
           OUR MENUS
         </h3>

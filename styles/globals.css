@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .center-container {
+    @apply w-full max-w-5xl mx-auto sm:px-7;
+  }
+}
+
 @keyframes TopToBottom {
   0% {
     top: -100%;

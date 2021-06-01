@@ -47,7 +47,7 @@ export default function NavBar() {
         </nav>
 
         <nav className="hidden h-20 bg-branding-dark lg:block">
-          <div className="flex justify-between w-full h-full max-w-5xl mx-auto sm:px-7">
+          <div className="flex justify-between h-full center-container">
             {/* Left items */}
             <div className="flex items-center space-x-8">
               {/* Delivery Order */}
