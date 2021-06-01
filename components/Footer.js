@@ -8,19 +8,19 @@ import YouTubeIcon from "@/vectors/youtube.svg";
 export default function Footer() {
   return (
     <footer className="bg-branding-dark">
-      <div className="mx-auto w-full max-w-5xl px-8 lg:px-0 text-white py-7 space-y-6 lg:space-y-4 font-secondary flex flex-col items-center lg:items-start">
+      <div className="flex flex-col items-center w-full max-w-5xl mx-auto space-y-6 text-white sm:px-7 py-7 lg:space-y-4 font-secondary lg:items-start">
         {/* Copyright */}
-        <p className="font-primary text-center text-xl lg:text-base">
+        <p className="text-xl text-center font-primary lg:text-base">
           BURGER KING® DELIVERY
         </p>
 
         {/* Contact */}
-        <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 items-center lg:items-start">
+        <div className="flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 lg:items-start">
           {/* Phone */}
           <p>
-            <a className="font-primary text-xl lg:text-base" href="tel:1234567">
+            <a className="text-xl font-primary lg:text-base" href="tel:1234567">
               <span>
-                <PhoneIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mr-2" />
+                <PhoneIcon className="inline w-6 h-6 mr-2 lg:w-4 lg:h-4" />
               </span>
               15000 25
             </a>
@@ -30,7 +30,7 @@ export default function Footer() {
           <p>
             <a href="mailto:dummy@example.com">
               <span>
-                <MailIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mr-2" />
+                <MailIcon className="inline w-6 h-6 mr-2 lg:w-4 lg:h-4" />
               </span>
               guestservice@burgerking.co.id
             </a>
@@ -40,31 +40,31 @@ export default function Footer() {
           <ul>
             <li className="inline">
               <a href="#facebook">
-                <FacebookIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+                <FacebookIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
               </a>
             </li>
 
             <li className="inline">
               <a href="#instagram">
-                <InstagramIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+                <InstagramIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
               </a>
             </li>
 
             <li className="inline">
               <a href="#twitter">
-                <TwitterIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+                <TwitterIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
               </a>
             </li>
 
             <li className="inline">
               <a href="#youtube">
-                <YouTubeIcon className="w-6 h-6 lg:w-4 lg:h-4 inline mx-2 lg:mx-1" />
+                <YouTubeIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
               </a>
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 items-center lg:text-sm lg:text-gray-500">
+        <div className="flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 lg:text-sm lg:text-gray-500">
           {/* Privacy Policy */}
           <a className="block" href="#kebijakan-privasi">
             Kebijakan Privasi
@@ -80,7 +80,7 @@ export default function Footer() {
           <span className="hidden lg:inline">|</span>
 
           {/* Trademark */}
-          <p className="text-gray-500 text-center">
+          <p className="text-center text-gray-500">
             TM & © 2021 Burger King Corporation. Used Under License. All rights
             reserved.
           </p>
