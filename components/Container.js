@@ -23,7 +23,7 @@ export default function Container(props) {
 
       <NavBar />
       <main
-        className="bg-branding-light pb-7 lg:pb-11 min-h-screen bg-fixed bg-no-repeat bg-cover"
+        className="bg-branding-light py-7 lg:pb-11 space-y-7 min-h-screen bg-fixed bg-no-repeat bg-cover"
         style={{
           backgroundImage:
             "url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211')",

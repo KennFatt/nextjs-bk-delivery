@@ -9,7 +9,7 @@ import Container from "@/components/Container";
 export default function Home(props) {
   return (
     <Container title="Home">
-      <h2 className="py-7 font-primary text-branding-accent-secondary text-2xl text-center">
+      <h2 className="font-primary text-branding-accent-secondary text-2xl text-center">
         OUR MENUS
       </h2>
 
