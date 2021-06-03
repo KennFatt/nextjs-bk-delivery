@@ -6,7 +6,7 @@ import Footer from "./Footer";
 export default function Container(props) {
   const { title, description } = props;
   const meta = {
-    title: title || "Burger King - Clone",
+    title: `${title ? `${title} -` : ``} Burger King Clone`,
     author: "Kennan Fattah",
     description:
       description ||

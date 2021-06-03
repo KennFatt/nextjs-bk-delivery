@@ -1,12 +1,14 @@
 import fs from "fs/promises";
 import path from "path";
 
+import { toDisplayName } from "@/lib/utils";
+
 import DisplayCard from "@/components/DisplayCard";
 import Container from "@/components/Container";
 
 export default function Home(props) {
   return (
-    <Container>
+    <Container title="Home">
       <h2 className="py-7 font-primary text-branding-accent-secondary text-2xl text-center">
         OUR MENUS
       </h2>
@@ -38,7 +40,7 @@ export async function getStaticProps() {
   const products = content.map(({ id, thumbnailUrl, displayName }) => ({
     id,
     thumbnailUrl,
-    displayName: displayName || id.replaceAll("-", " "),
+    displayName: toDisplayName(id, displayName),
   }));
 
   return {
