@@ -7,14 +7,19 @@ import Container from "@/components/Container";
 export default function Home(props) {
   return (
     <Container>
-      <h3 className="py-7 font-primary text-branding-accent-secondary text-2xl text-center">
+      <h2 className="py-7 font-primary text-branding-accent-secondary text-2xl text-center">
         OUR MENUS
-      </h3>
+      </h2>
 
       <section className="center-container lg:gap-4 lg:grid-cols-3 grid grid-cols-2 gap-3 px-4">
         {/* TODO: Impl navigation to the category page inside DisplayCard */}
         {props.products.map(({ id, thumbnailUrl, displayName }) => (
-          <DisplayCard key={id} title={displayName} imageSrc={thumbnailUrl} />
+          <DisplayCard
+            key={id}
+            navigateTo={`/menus/${id}`}
+            title={displayName}
+            imageSrc={thumbnailUrl}
+          />
         ))}
       </section>
     </Container>
