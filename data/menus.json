@@ -1,0 +1,236 @@
+[
+  {
+    "id": "plant-based-whooper",
+    "displayName": "plant-based whooper",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/5/7/axr4rbauaygcgcxeth2vas_product_list.png",
+    "items": [
+      {
+        "id": "6260",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/5/6/aavicgonubtfd63y4rocay_product_list.png",
+        "name": "plant based whooper jr",
+        "price": 25000
+      },
+      {
+        "id": "6294",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/5/7/rajvpcjjsabrsikgbmpkq5_product_list.png",
+        "name": "plant-based whooper jr. + whooper jr.",
+        "price": 45000
+      }
+    ]
+  },
+  {
+    "id": "nasi-king-box",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/4/20/s7zuximfeid89jb9yputjb_product_list.png",
+    "items": [
+      {
+        "id": "6224",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/4/19/wrdyphmncjvpb95usfnhj8_product_list.png",
+        "name": "rice box bbq + mozza",
+        "price": 20000
+      },
+      {
+        "id": "6218",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/4/19/q5u3zf6krpamvqaeseagv2_product_list.png",
+        "name": "rice box chili mayo + mozza",
+        "price": 20000
+      }
+    ]
+  },
+  {
+    "id": "tropical-delight",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/4/13/8papk3by3dkny35vuhep8d_product_list.png",
+    "items": [
+      {
+        "id": "5012",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/5/18/4kxehababd2knasnidiczr_product_list.png",
+        "name": "pineapple coconut fusion",
+        "price": 10000
+      },
+      {
+        "id": "6205",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/4/12/5mjubgh7znxkfe3awudqzp_product_list.png",
+        "name": "tropical delight beef burger med",
+        "price": 50000
+      }
+    ]
+  },
+  {
+    "id": "setiap-hari-bokek",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/5/28/adhcmtdzgg2xs56fjuwjnp_product_list.png",
+    "items": [
+      {
+        "id": "5746",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2020/11/17/9ufh5pd8wsy3eiks4upsqu_product_list.png",
+        "name": "bbq beef rasher",
+        "price": 20000
+      }
+    ]
+  },
+  {
+    "id": "bk-sip",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/1/22/fbh2cfxwtyynrpajsunpbu_product_list.png",
+    "items": [
+      {
+        "id": "5806",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/5/19/khdzrtjbbacphs6frlcroy_product_list.png",
+        "name": "BK Sip Kopi Gula Aren Caramel",
+        "price": 15000
+      },
+      {
+        "id": "5781",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/5/19/oaf2su8kvc2bctnwrkmzuj_product_list.png",
+        "name": "BK Sip Kopi Gula Aren Original",
+        "price": 15000
+      }
+    ]
+  },
+  {
+    "id": "tasty-offers",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/1/22/ae8hhlcxs6bd3nqiercmhi_product_list.png",
+    "items": [
+      {
+        "id": "3865",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/3/5/vdvduq5ptwka7yjjamcy9n_product_list.png",
+        "name": "1 King's Chicken Meal",
+        "price": 20000
+      },
+      {
+        "id": "4848",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/5/31/8hq7fbqk77pxrgfd5vxebs_product_list.png",
+        "name": "BOGO Cheeseburger",
+        "price": 40000
+      }
+    ]
+  },
+  {
+    "id": "king-deals",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/5/31/xvsfwzmzdwspnpbsxkunp5_product_list.png",
+    "items": [
+      {
+        "id": "4546",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/6/2/ode3rbi5qh2rydyiuc2ffx_product_list.png",
+        "name": "King Deals Chicken",
+        "price": 20000
+      },
+      {
+        "id": "4670",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/6/2/szpmttzeutnpjeqks2sdca_product_list.png",
+        "name": "King Deals Beef Burger",
+        "price": 25000
+      }
+    ]
+  },
+  {
+    "id": "flame-grilled-burger",
+    "displayName": "flame-grilled burger",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/1/22/ei9wu5sq4c6gmev8gu38yf_product_list.png",
+    "items": [
+      {
+        "id": "3401",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/2/17/tos5lltwwqnvtvuap8anhm_product_list.png",
+        "name": "WHOPPER®",
+        "price": 60000
+      },
+      {
+        "id": "2989",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/2/17/yrvaanysokwbrtvjuhj4dd_product_list.png",
+        "name": "CHEESEBURGER XL",
+        "price": 60000
+      }
+    ]
+  },
+  {
+    "id": "flame-grilled-burger-jr",
+    "displayName": "flame-grilled burger jr.",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/1/22/jrzffqnzh8a5dqg9u5waba_product_list.png",
+    "items": [
+      {
+        "id": "3622",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/2/17/sjlb9pyyfq2i8wjcv6kueu_product_list.png",
+        "name": "WHOPPER JR®",
+        "price": 45000
+      },
+      {
+        "id": "2898",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/2/17/oejz8wiymscxn4qcsjebgm_product_list.png",
+        "name": "DOUBLE CHEESEBURGER",
+        "price": 50000
+      }
+    ]
+  },
+  {
+    "id": "kings-chicken",
+    "displayName": "king's burger",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/1/22/kat3q6nt4rsug9hbirah54_product_list.png",
+    "items": [
+      {
+        "id": "3110",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/4/29/2ru4at2flynmwiseew2jvk_product_list.jpg",
+        "name": "King's Chicken Box 9",
+        "price": 125000
+      },
+      {
+        "id": "2469",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/4/29/5q4j36mvq2vntzkn4e2fxc_product_list.jpg",
+        "name": "King's Chicken Box 6",
+        "price": 80000
+      }
+    ]
+  },
+  {
+    "id": "kings-chicken-fish-burger",
+    "displayName": "king's chicken & fish burger",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2021/1/22/qbvrtylbxv9pqvb3vxpjpm_product_list.png",
+    "items": [
+      {
+        "id": "3098",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2021/2/17/bdhilkbxftuvitsvqwq45g_product_list.png",
+        "name": "CLASSIC CRISPY CHICKEN",
+        "price": 50000
+      },
+      {
+        "id": "3202",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/4/30/ajyrsrqy8h5ecbddd2zhas_product_list.jpg",
+        "name": "QUATTRO CHEESE CRISPY CHICKEN",
+        "price": 50000
+      }
+    ]
+  },
+  {
+    "id": "sides-sweets",
+    "displayName": "snacks",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2019/5/17/fkfyfpcencl63zrs5awgqc_product_list.jpg",
+    "items": [
+      {
+        "id": "2908",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/4/29/hd4qghhz9k3yhhsuicydp8_product_list.jpg",
+        "name": "CHEESY RASHER FRIES",
+        "price": 10000
+      },
+      {
+        "id": "2758",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/4/29/susu6drqrttbzngqpq4vxh_product_list.jpg",
+        "name": "CHEESY FRIES",
+        "price": 10000
+      }
+    ]
+  },
+  {
+    "id": "beverages",
+    "thumbnailUrl": "https://order.bkdelivery.co.id/media/thumb/group_photo/2019/11/14/8gmvptzfvkyr8ltpevtluo_product_list.jpg",
+    "items": [
+      {
+        "id": "2786",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/5/3/h535upbgvthbcfethaudkj_product_list.jpg",
+        "name": "LARGE COKE",
+        "price": 25000
+      },
+      {
+        "id": "2631",
+        "imageUrl": "https://order.bkdelivery.co.id/media/thumb/product_photo/2019/5/3/ju3eh7pkzsnganf3xmxylj_product_list.jpg",
+        "name": "LARGE FANTA",
+        "price": 25000
+      }
+    ]
+  }
+]
