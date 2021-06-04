@@ -1,7 +1,5 @@
-import fs from "fs/promises";
-import path from "path";
-
 import { toDisplayName } from "@/lib/utils";
+import { loadData } from "@/lib/data-handler";
 
 import DisplayCard from "@/components/DisplayCard";
 import Container from "@/components/Container";
@@ -29,8 +27,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const dataPath = path.join(process.cwd(), "data", "menus.json");
-  const content = JSON.parse(await fs.readFile(dataPath));
+  const content = await loadData();
 
   // TODO: proper content handling
   if (!content) {
