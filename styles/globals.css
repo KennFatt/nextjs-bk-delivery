@@ -8,6 +8,42 @@
   .center-container {
     @apply w-full max-w-5xl mx-auto sm:px-7 !important;
   }
+
+  /* Card's container */
+  .card {
+    @apply rounded-xl h-full p-2 overflow-hidden bg-white shadow-xl;
+  }
+  .card__category {
+    @apply lg:p-4 flex flex-col justify-center;
+  }
+  .card__product {
+    @apply lg:flex-col flex items-center;
+  }
+
+  /* Card's image */
+  .card__product img {
+    @apply lg:w-full object-scale-down w-1/3;
+  }
+
+  /* Card's body */
+  .card div {
+    @apply text-branding-accent-secondary lg:py-4 flex  font-primary;
+  }
+  .card__category div {
+    @apply lg:justify-between items-start justify-center py-2 space-x-2;
+  }
+  .card__category div h3 {
+    @apply lg:text-left lg:text-lg text-center;
+  }
+  .card__product div {
+    @apply lg:w-full sm:leading-8 sm:px-4 lg:px-6 flex-col w-2/3;
+  }
+  .card__product div h3 {
+    @apply sm:text-lg text-sm;
+  }
+  .card__product div p {
+    @apply font-secondary font-bold;
+  }
 }
 
 @keyframes TopToBottom {
