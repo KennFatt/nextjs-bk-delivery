@@ -10,6 +10,7 @@ module.exports = {
         "branding-accent-primary": "#FAAF18",
         "branding-accent-primary-darker": "#ED7801",
         "branding-accent-secondary": "#8B542F",
+        "branding-accent-secondary-lighter": "#FBE6D6",
       },
       fontFamily: {
         primary: ["Bowlby One SC", "cursive"],
@@ -19,8 +20,8 @@ module.exports = {
         13: "3.25rem",
       },
       screens: {
-        xs: "475px"
-      }
+        xs: "475px",
+      },
     },
   },
   variants: {
