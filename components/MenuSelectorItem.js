@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SelectorMenuItem({
+export default function MenuSelectorItem({
   navigateTo,
   displayName,
   isSelected,

@@ -6,7 +6,7 @@ import DisplayCard from "./DisplayCard";
 import SearchBox from "./SearchBox";
 import MenuToggleButton from "./MenuToggleButton";
 import MenuSelectorButton from "./MenuSelectorButton";
-import SelectorMenuItem from "./SelectorMenuItem";
+import MenuSelectorItem from "./MenuSelectorItem";
 
 export default function MenuContainer({ selectedMenu, menuIds }) {
   const menuItems = selectedMenu.items;
@@ -62,7 +62,7 @@ export default function MenuContainer({ selectedMenu, menuIds }) {
             <div className="lg:block hidden mt-10">
               <ul className="font-primary text-branding-accent-secondary space-y-1 text-sm">
                 {menuIds.map((menuId) => (
-                  <SelectorMenuItem
+                  <MenuSelectorItem
                     key={menuId}
                     navigateTo={`/menus/${menuId}`}
                     displayName={toDisplayName(menuId)}

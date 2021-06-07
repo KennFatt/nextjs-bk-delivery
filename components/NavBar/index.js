@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import HamburgerMenu from "./items/HamburgerMenu";
+import HamburgerMenuButton from "./items/HamburgerMenuButton";
 import ShoppingCart from "./items/ShoppingCart";
 import NavLinkHome from "./items/NavLinkHome";
 import NavLinkLogin from "./items/NavLinkLogin";
@@ -26,9 +26,9 @@ export default function NavBar() {
         className={`sticky top-0 z-50 lg:static ${
           !isOverlayShown ? "shadow-lg" : ""
         }`}>
-        <nav className="flex items-center justify-between h-13 bg-branding-dark lg:hidden">
+        <nav className="h-13 bg-branding-dark lg:hidden flex items-center justify-between">
           {/* Hamburger Button */}
-          <HamburgerMenu
+          <HamburgerMenuButton
             isOverlayShown={isOverlayShown}
             onToggleOverlay={onToggleOverlay}
           />
@@ -46,8 +46,8 @@ export default function NavBar() {
           <ShoppingCart />
         </nav>
 
-        <nav className="hidden h-20 bg-branding-dark lg:block">
-          <div className="flex justify-between h-full center-container">
+        <nav className="bg-branding-dark lg:block hidden h-20">
+          <div className="center-container flex justify-between h-full">
             {/* Left items */}
             <div className="flex items-center space-x-8">
               {/* Delivery Order */}
@@ -69,7 +69,7 @@ export default function NavBar() {
       {/* Overlay */}
       <OffCanvasAnimation show={isOverlayShown}>
         <Overlay>
-          <>
+          <div className="flex flex-col w-full h-full space-y-8">
             {/* Home */}
             <NavLinkHome />
 
@@ -83,7 +83,7 @@ export default function NavBar() {
 
             {/* Login */}
             <NavLinkLogin />
-          </>
+          </div>
         </Overlay>
       </OffCanvasAnimation>
     </>
