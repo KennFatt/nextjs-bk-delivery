@@ -53,14 +53,14 @@
   }
 
   100% {
-    top: 50px;
+    top: 3.25rem;
     opacity: 1;
   }
 }
 
 @keyframes BottomToTop {
   0% {
-    top: 0;
+    top: 3.25rem;
     opacity: 1;
   }
 
