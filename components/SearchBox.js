@@ -1,14 +1,11 @@
 import MagnifierIcon from "@/vectors/magnifier.svg";
 
-export default function SearchBox({
-  onInputChange,
-  searchValue,
-  isForDesktop,
-}) {
+export default function SearchBox({ onInputChange, isForDesktop }) {
   const conditionalClasses = !isForDesktop
     ? "lg:hidden flex"
     : "lg:flex hidden";
 
+  // TODO: re-sync the input's value with local state?
   return (
     <div
       className={`rounded-xl lg:shadow-lg w-full h-12 overflow-hidden bg-white ${conditionalClasses}`}>
@@ -17,7 +14,6 @@ export default function SearchBox({
         className="font-secondary w-4/5 h-full p-2 placeholder-gray-300 outline-none"
         placeholder="Search menu..."
         onChange={onInputChange}
-        value={searchValue}
       />
 
       {/* TODO: Impl a handler when button got clicked? */}
