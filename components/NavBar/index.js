@@ -26,6 +26,7 @@ export default function NavBar() {
         className={`sticky top-0 z-50 lg:static ${
           !isOverlayShown ? "shadow-lg" : ""
         }`}>
+        {/* Navigation @ mobile */}
         <nav className="h-13 bg-branding-dark lg:hidden flex items-center justify-between">
           {/* Hamburger Button */}
           <HamburgerMenuButton
@@ -46,8 +47,26 @@ export default function NavBar() {
           <ShoppingCart />
         </nav>
 
+        {/* Navigation @ desktop */}
         <nav className="bg-branding-dark lg:block hidden h-20">
-          <div className="center-container flex justify-between h-full">
+          <div className="center-container relative flex justify-between h-full">
+            {/* Branding logo overflow container */}
+            <div className="-left-24 top-2 absolute w-24 h-24">
+              {/* Branding Logo */}
+              <Link href="/">
+                <a>
+                  <img
+                    className="w-full h-full"
+                    src="https://bkdelivery.co.id/static/website/img/BK_TopLogo1x.df8014631c65.png"></img>
+                </a>
+              </Link>
+            </div>
+            {/* Shopping cart overflow container */}
+            <div className="-right-16 absolute w-20 h-full">
+              <ShoppingCart />
+            </div>
+
+            {/* Actual navigation items (flex) */}
             {/* Left items */}
             <div className="flex items-center space-x-8">
               {/* Delivery Order */}
