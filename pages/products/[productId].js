@@ -136,5 +136,5 @@ export async function getStaticProps(context) {
 
   const menuList = getMenuList(data, productDetail.menuId);
 
-  return { props: { menuList, productDetail }, revalidate: 1 };
+  return { props: { menuList, productDetail } };
 }
