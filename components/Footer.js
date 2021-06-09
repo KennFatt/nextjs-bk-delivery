@@ -8,19 +8,19 @@ import YouTubeIcon from "@/vectors/youtube.svg";
 export default function Footer() {
   return (
     <footer className="bg-branding-dark">
-      <div className="flex flex-col items-center space-y-6 text-white center-container py-7 lg:space-y-4 font-secondary lg:items-start">
+      <div className="center-container py-7 lg:space-y-4 font-secondary lg:items-start flex flex-col items-center space-y-6 text-white">
         {/* Copyright */}
-        <p className="text-xl text-center font-primary lg:text-base">
+        <p className="font-primary lg:text-base text-xl text-center">
           BURGER KING® DELIVERY
         </p>
 
         {/* Contact */}
-        <div className="flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 lg:items-start">
+        <div className="lg:space-y-0 lg:flex-row lg:space-x-4 lg:items-start flex flex-col items-center space-y-4">
           {/* Phone */}
           <p>
-            <a className="text-xl font-primary lg:text-base" href="tel:1234567">
+            <a className="font-primary lg:text-base text-xl" href="tel:1234567">
               <span>
-                <PhoneIcon className="inline w-6 h-6 mr-2 lg:w-4 lg:h-4" />
+                <PhoneIcon className="lg:w-4 lg:h-4 inline w-6 h-6 mr-2" />
               </span>
               15000 25
             </a>
@@ -30,7 +30,7 @@ export default function Footer() {
           <p>
             <a href="mailto:dummy@example.com">
               <span>
-                <MailIcon className="inline w-6 h-6 mr-2 lg:w-4 lg:h-4" />
+                <MailIcon className="lg:w-4 lg:h-4 inline w-6 h-6 mr-2" />
               </span>
               guestservice@burgerking.co.id
             </a>
@@ -40,44 +40,44 @@ export default function Footer() {
           <ul>
             <li className="inline">
               <a href="#facebook">
-                <FacebookIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
+                <FacebookIcon className="lg:w-4 lg:h-4 lg:mx-1 inline w-6 h-6 mx-2" />
               </a>
             </li>
 
             <li className="inline">
               <a href="#instagram">
-                <InstagramIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
+                <InstagramIcon className="lg:w-4 lg:h-4 lg:mx-1 inline w-6 h-6 mx-2" />
               </a>
             </li>
 
             <li className="inline">
               <a href="#twitter">
-                <TwitterIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
+                <TwitterIcon className="lg:w-4 lg:h-4 lg:mx-1 inline w-6 h-6 mx-2" />
               </a>
             </li>
 
             <li className="inline">
               <a href="#youtube">
-                <YouTubeIcon className="inline w-6 h-6 mx-2 lg:w-4 lg:h-4 lg:mx-1" />
+                <YouTubeIcon className="lg:w-4 lg:h-4 lg:mx-1 inline w-6 h-6 mx-2" />
               </a>
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4 lg:text-sm lg:text-gray-500">
+        <div className="lg:space-y-0 lg:flex-row lg:space-x-4 lg:text-sm lg:text-gray-500 flex flex-col items-center space-y-4">
           {/* Privacy Policy */}
           <a className="block" href="#kebijakan-privasi">
             Kebijakan Privasi
           </a>
 
-          <span className="hidden lg:inline">|</span>
+          <span className="lg:inline hidden">|</span>
 
           {/* Terms of Service */}
           <a className="block" href="#tos">
             Syarat dan Ketentuan
           </a>
 
-          <span className="hidden lg:inline">|</span>
+          <span className="lg:inline hidden">|</span>
 
           {/* Trademark */}
           <p className="text-center text-gray-500">

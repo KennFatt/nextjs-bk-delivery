@@ -3,7 +3,7 @@ import AccountForm from "@/components/AccountForm";
 
 export default function RegisterPage() {
   const onRegisterButtonClicked = (ev) => {
-    // NOOP
+    // TODO: handle the form?
     ev.preventDefault();
   };
 

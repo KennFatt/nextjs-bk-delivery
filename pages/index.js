@@ -1,4 +1,3 @@
-import { toDisplayName } from "@/lib/utils";
 import { loadData } from "@/lib/data-handler";
 
 import DisplayCard from "@/components/DisplayCard";
@@ -27,17 +26,16 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const content = await loadData();
-
-  // TODO: proper content handling
-  if (!content) {
+  const data = await loadData();
+  if (!data) {
+    // TODO: handling empty data or a failure?
     return { notFound: true };
   }
 
-  const products = content.map(({ id, thumbnailUrl, displayName }) => ({
+  const products = data.map(({ id, thumbnailUrl, displayName }) => ({
     id,
     thumbnailUrl,
-    displayName: toDisplayName(id, displayName),
+    displayName,
   }));
 
   return {

@@ -5,7 +5,7 @@ import AccountForm from "@/components/AccountForm";
 
 export default function LoginPage() {
   const onLoginButtonClicked = (ev) => {
-    // NOOP
+    // TODO: handle the form?
     ev.preventDefault();
   };
 

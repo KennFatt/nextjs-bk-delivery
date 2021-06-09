@@ -3,8 +3,7 @@ import Head from "next/head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-export default function Container(props) {
-  const { title, description } = props;
+export default function Container({ title, description, ...props }) {
   const meta = {
     title: `${title ? `${title} -` : ``} Burger King Clone`,
     author: "Kennan Fattah",
@@ -21,16 +20,19 @@ export default function Container(props) {
         <meta name="description" content={meta.description} />
       </Head>
 
-      <NavBar />
-      <main
-        className="py-7 lg:pb-11 space-y-7 min-h-[calc(100vh-3.25rem)] lg:min-h-[calc(100vh-5rem)] bg-fixed bg-no-repeat bg-cover"
-        style={{
-          backgroundImage:
-            "url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211')",
-        }}>
-        {props.children}
-      </main>
-      <Footer />
+      {/* Document wrapper */}
+      <div className="overflow-hidden">
+        <NavBar />
+        <main
+          className="py-7 lg:pb-11 space-y-7 min-h-[calc(100vh-3.25rem)] lg:min-h-[calc(100vh-5rem)] bg-fixed bg-no-repeat bg-cover"
+          style={{
+            backgroundImage:
+              "url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211')",
+          }}>
+          {props.children}
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

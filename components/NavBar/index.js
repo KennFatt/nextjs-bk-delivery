@@ -9,7 +9,7 @@ import NavLinkMenus from "./items/NavLinkMenus";
 import NavLinkPromotions from "./items/NavLinkPromotions";
 
 import Overlay from "@/components/Overlay";
-import OffCanvasAnimation from "@/components/animations/OffcanvasAnimation";
+import OffCanvasAnimation from "@/components/animations/OffCanvasAnimation";
 
 export default function NavBar() {
   const [isOverlayShown, setIsOverlayShown] = useState(false);

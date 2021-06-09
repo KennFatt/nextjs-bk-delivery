@@ -3,7 +3,7 @@ import AccountForm from "@/components/AccountForm";
 
 export default function ResetPasswordPage() {
   const onSendButtonClicked = (ev) => {
-    // NOOP
+    // TODO: handle the form?
     ev.preventDefault();
   };
 

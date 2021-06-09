@@ -1,4 +1,3 @@
-import { toIDRFormat } from "@/lib/utils";
 import Link from "next/link";
 
 export default function DisplayCard({
@@ -21,7 +20,7 @@ export default function DisplayCard({
             <h3>{title}</h3>
 
             {/* Price */}
-            {productPrice && <p>{toIDRFormat(productPrice || 0)}</p>}
+            {productPrice && <p>{productPrice}</p>}
 
             {/* Button */}
             {!productPrice && (

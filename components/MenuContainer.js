@@ -6,15 +6,27 @@ import MenuToggleButton from "./MenuToggleButton";
 import MenuSelectorButton from "./MenuSelectorButton";
 import MenuSelectorItem from "./MenuSelectorItem";
 
-export default function MenuContainer(props) {
-  const { title, menuList, showSearchToggler, onSearchInputChange } = props;
+export default function MenuContainer({
+  title,
+  menuList,
+  showSearchToggler,
+  onSearchInputChange,
+  ...props
+}) {
   const [isSearchBoxShown, setSearchBoxShown] = useState(false);
+
+  /** HACK: it could be a performance issue */
+  const selectedMenu = menuList.find((menu) => menu.isSelected);
 
   const onToggleButtonClicked = () => {
     setSearchBoxShown((prevValue) => !prevValue);
   };
 
   const onInputChange = (ev) => {
+    if (!onSearchInputChange) {
+      return;
+    }
+
     onSearchInputChange(ev.target.value.toLowerCase());
   };
 
@@ -22,7 +34,7 @@ export default function MenuContainer(props) {
     <Container title={title}>
       <div className="center-container lg:flex-row lg:space-y-0 flex flex-col space-y-6">
         {/* Section: Search bar and menus list */}
-        <section className="lg:w-1/4 sm:px-0 w-full px-4">
+        <section className="lg:w-1/4 sm:px-0 w-full px-3">
           <div className="lg:space-x-0 lg:pr-10 lg:flex-col flex w-full space-x-2">
             {/* Button (mobile): toggle the search bar */}
             {/* Hidden @ large breakpoint */}
@@ -36,7 +48,7 @@ export default function MenuContainer(props) {
             {/* Button and Input (mobile): menu selector button and search bar */}
             {/* Hidden @ large breakpoint */}
             {!isSearchBoxShown ? (
-              <MenuSelectorButton selectedMenuName={title} />
+              <MenuSelectorButton selectedMenuName={selectedMenu.displayName} />
             ) : (
               <SearchBox onInputChange={onInputChange} />
             )}
@@ -65,11 +77,11 @@ export default function MenuContainer(props) {
         </section>
         {/* !Section: Search bar and menus list */}
 
-        {/* Section: Menu's items grid */}
-        <section className="lg:w-3/4 sm:px-0 w-full px-4">
+        {/* Section: Actual content */}
+        <section className="lg:w-3/4 sm:px-0 w-full px-3">
           {props.children}
         </section>
-        {/* !Section: Menu's items grid */}
+        {/* !Section: Actual content */}
       </div>
     </Container>
   );

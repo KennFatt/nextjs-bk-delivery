@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function NavLinkMenu() {
+export default function NavLinkMenus() {
   return (
     <Link href="/menus">
-      <a className="text-3xl text-white lg:text-xl font-primary">
+      <a className="lg:text-xl font-primary text-3xl text-white">
         <p className="lg:leading-3">
-          <span className="block text-lg lg:text-xs text-branding-accent-primary">
+          <span className="lg:text-xs text-branding-accent-primary block text-lg">
             delivery
           </span>
           order
