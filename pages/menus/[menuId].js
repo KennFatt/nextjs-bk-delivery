@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { loadData, getMenuById, getMenuList } from "@/lib/data-handler";
+import { transformData, fetchData } from "@/lib/data-handler";
 
 import MenuContainer from "@/components/MenuContainer";
 import DisplayCard from "@/components/DisplayCard";
@@ -39,11 +39,8 @@ export default function MenuPage(props) {
 }
 
 export async function getStaticPaths() {
-  /** Genereate all known menus */
-  const menuIds = (await loadData()).map((data) => ({
-    params: {
-      menuId: data.id,
-    },
+  const menuIds = transformData(await fetchData()).menus.map(({ id }) => ({
+    params: { menuId: id },
   }));
 
   return {
@@ -53,15 +50,22 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const data = await loadData();
+  const data = await fetchData();
   if (!data) {
     return { notFound: true };
   }
 
-  const selectedMenu = getMenuById(data, context.params.menuId);
-  const menuList = getMenuList(data, selectedMenu.id);
+  const { menus } = transformData(data);
+
+  const selectedMenu = menus.find(({ id }) => context.params.menuId === id);
+  const menuList = menus.map(({ id, displayName }) => {
+    return selectedMenu.id === id
+      ? { id, displayName, isSelected: true }
+      : { id, displayName };
+  });
 
   return {
     props: { selectedMenu, menuList },
+    revalidate: 60,
   };
 }

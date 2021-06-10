@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { loadData, getMenuList } from "@/lib/data-handler";
+import { fetchData, transformData } from "@/lib/data-handler";
 
 import MenuContainer from "@/components/MenuContainer";
 import DisplayCard from "@/components/DisplayCard";
 
-export default function MenuIndexPage(props) {
-  const { selectedMenu, menuList } = props;
+export default function MenuIndexPage({ selectedMenu, menuList }) {
   const [searchValue, setSearchValue] = useState("");
 
   const onSearch = (lowerCasedValue) => {
@@ -37,15 +36,22 @@ export default function MenuIndexPage(props) {
 }
 
 export async function getStaticProps() {
-  const data = await loadData();
+  const data = await fetchData();
   if (!data) {
     return { notFound: true };
   }
 
-  const selectedMenu = data[0];
-  const menuList = getMenuList(data, selectedMenu.id);
+  const { menus } = transformData(data);
+
+  const selectedMenu = menus[0];
+  const menuList = menus.map(({ id, displayName }) => {
+    return selectedMenu.id === id
+      ? { id, displayName, isSelected: true }
+      : { id, displayName };
+  });
 
   return {
     props: { selectedMenu, menuList },
+    revalidate: 60,
   };
 }

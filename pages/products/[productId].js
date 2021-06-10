@@ -1,26 +1,11 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
-import { getMenuList, getProductDetail, loadData } from "@/lib/data-handler";
+import { fetchData, transformData } from "@/lib/data-handler";
 
 import MenuContainer from "@/components/MenuContainer";
-import Container from "@/components/Container";
 
 export default function ProductPage(props) {
   const { menuList, productDetail } = props;
   const [productQuantity, setProductQuantity] = useState(1);
-
-  const router = useRouter();
-  if (router.isFallback) {
-    return (
-      <Container>
-        <div className="flex items-center justify-center min-h-[calc(100vh-6.75rem)]">
-          <h2 className="font-primary text-branding-accent-secondary animate-pulse text-2xl">
-            Loading...
-          </h2>
-        </div>
-      </Container>
-    );
-  }
 
   const quantityButtonHandler = (action) => {
     return () => {
@@ -117,24 +102,39 @@ export default function ProductPage(props) {
 }
 
 export async function getStaticPaths() {
+  const productIds = transformData(await fetchData()).products.map(
+    ({ id }) => ({ params: { productId: id } })
+  );
+
   return {
-    paths: [],
-    fallback: true,
+    paths: productIds,
+    fallback: false,
   };
 }
 
 export async function getStaticProps(context) {
-  const data = await loadData();
+  const data = await fetchData();
   if (!data) {
     return { notFound: true };
   }
 
-  const productDetail = getProductDetail(data, context.params.productId);
+  const { menus, products } = transformData(data);
+
+  const productDetail = products.find(
+    ({ id }) => context.params.productId === id
+  );
   if (!productDetail) {
     return { notFound: true };
   }
 
-  const menuList = getMenuList(data, productDetail.menuId);
+  const menuList = menus.map(({ id, displayName }) => {
+    return productDetail.menuId === id
+      ? { id, displayName, isSelected: true }
+      : { id, displayName };
+  });
 
-  return { props: { menuList, productDetail } };
+  return {
+    props: { menuList, productDetail },
+    revalidate: 60,
+  };
 }
