@@ -21,7 +21,7 @@ export default function Container({ title, description, ...props }) {
       </Head>
 
       {/* Document wrapper */}
-      <div className="overflow-hidden">
+      <div className="lg:overflow-hidden">
         <NavBar />
         <main
           className="py-7 lg:pb-11 space-y-7 min-h-[calc(100vh-3.25rem)] lg:min-h-[calc(100vh-5rem)] bg-fixed bg-no-repeat bg-cover"
