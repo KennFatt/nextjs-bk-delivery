@@ -18,7 +18,7 @@ export default function OffCanvasAnimation({ show, children }) {
   return (
     shouldRender && (
       <div
-        className="fixed w-full"
+        className="fixed top-0 w-full"
         style={{ animation: `${show ? "TopToBottom" : "BottomToTop"} 500ms` }}
         onAnimationEnd={onAnimationEnd}>
         {children}
