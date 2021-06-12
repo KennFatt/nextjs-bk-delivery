@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import { ToggleOverlayProvider } from "@/contexts/overlay-context";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
@@ -22,15 +23,18 @@ export default function Container({ title, description, ...props }) {
 
       {/* Document wrapper */}
       <div className="lg:overflow-hidden">
-        <NavBar />
-        <main
-          className="py-7 lg:pb-11 space-y-7 min-h-[calc(100vh-3.25rem)] lg:min-h-[calc(100vh-5rem)] bg-fixed bg-no-repeat bg-cover"
-          style={{
-            backgroundImage:
-              "url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211')",
-          }}>
-          {props.children}
-        </main>
+        <ToggleOverlayProvider>
+          <NavBar />
+
+          <main
+            className="py-7 lg:pb-11 space-y-7 min-h-[calc(100vh-3.25rem)] lg:min-h-[calc(100vh-5rem)] bg-fixed bg-no-repeat bg-cover"
+            style={{
+              backgroundImage:
+                "url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211')",
+            }}>
+            {props.children}
+          </main>
+        </ToggleOverlayProvider>
         <Footer />
       </div>
     </>

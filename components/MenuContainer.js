@@ -5,6 +5,8 @@ import SearchBox from "./SearchBox";
 import MenuToggleButton from "./MenuToggleButton";
 import MenuSelectorButton from "./MenuSelectorButton";
 import MenuSelectorItem from "./MenuSelectorItem";
+import Overlay from "./Overlay";
+import { ToggleOverlayContext } from "@/contexts/overlay-context";
 
 export default function MenuContainer({
   title,
@@ -32,6 +34,7 @@ export default function MenuContainer({
 
   return (
     <Container title={title}>
+      {/* Content */}
       <div className="center-container lg:flex-row lg:space-y-0 flex flex-col space-y-6">
         {/* Section: Search bar and menus list */}
         <section className="lg:w-1/4 sm:px-0 w-full px-3">
@@ -48,7 +51,14 @@ export default function MenuContainer({
             {/* Button and Input (mobile): menu selector button and search bar */}
             {/* Hidden @ large breakpoint */}
             {!isSearchBoxShown ? (
-              <MenuSelectorButton selectedMenuName={selectedMenu.displayName} />
+              <ToggleOverlayContext.Consumer>
+                {({ toggleOverlay }) => (
+                  <MenuSelectorButton
+                    selectedMenuName={selectedMenu.displayName}
+                    onButtonClicked={() => toggleOverlay("menus")}
+                  />
+                )}
+              </ToggleOverlayContext.Consumer>
             ) : (
               <SearchBox onInputChange={onInputChange} />
             )}
@@ -83,6 +93,28 @@ export default function MenuContainer({
         </section>
         {/* !Section: Actual content */}
       </div>
+
+      {/* Overlay */}
+      <ToggleOverlayContext.Consumer>
+        {({ isShown, target }) =>
+          target === "menus" &&
+          isShown && (
+            <div className="-top-7 bg-branding-dark lg:hidden fixed w-full min-h-screen">
+              <Overlay>
+                <div className="font-primary text-branding-accent-secondary grid w-full h-full grid-cols-2 gap-1 text-sm">
+                  {menuList.map(({ id, ...rest }) => (
+                    <MenuSelectorItem
+                      key={id}
+                      navigateTo={`/menus/${id}`}
+                      {...rest}
+                    />
+                  ))}
+                </div>
+              </Overlay>
+            </div>
+          )
+        }
+      </ToggleOverlayContext.Consumer>
     </Container>
   );
 }

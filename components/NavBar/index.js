@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useContext } from "react";
 
 import HamburgerMenuButton from "./items/HamburgerMenuButton";
 import ShoppingCart from "./items/ShoppingCart";
@@ -11,12 +11,12 @@ import NavLinkPromotions from "./items/NavLinkPromotions";
 import Overlay from "@/components/Overlay";
 import OffCanvasAnimation from "@/components/animations/OffCanvasAnimation";
 
-export default function NavBar() {
-  const [isOverlayShown, setIsOverlayShown] = useState(false);
+import { ToggleOverlayContext } from "contexts/overlay-context";
 
-  // TODO: Make the Overlay toggler to be generic component
+export default function NavBar() {
+  const { isShown, target, toggleOverlay } = useContext(ToggleOverlayContext);
   const onToggleOverlay = () => {
-    setIsOverlayShown((prev) => !prev);
+    toggleOverlay("nav");
   };
 
   return (
@@ -24,13 +24,13 @@ export default function NavBar() {
       {/* Navigation */}
       <header
         className={`sticky top-0 z-50 lg:static ${
-          !isOverlayShown ? "shadow-lg" : ""
+          target === "nav" && !isShown ? "shadow-lg" : ""
         }`}>
         {/* Navigation @ mobile */}
         <nav className="h-13 bg-branding-dark lg:hidden flex items-center justify-between">
           {/* Hamburger Button */}
           <HamburgerMenuButton
-            isOverlayShown={isOverlayShown}
+            isOverlayShown={isShown}
             onToggleOverlay={onToggleOverlay}
           />
 
@@ -86,7 +86,7 @@ export default function NavBar() {
       </header>
 
       {/* Overlay */}
-      <OffCanvasAnimation show={isOverlayShown}>
+      <OffCanvasAnimation show={isShown}>
         <Overlay>
           <div className="flex flex-col w-full h-full space-y-8">
             {/* Home */}

@@ -11,6 +11,9 @@
       "@/components/*": [
         "components/*"
       ],
+      "@/contexts/*": [
+        "contexts/*"
+      ],
       "@/lib/*": [
         "lib/*"
       ]
