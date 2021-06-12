@@ -86,7 +86,7 @@ export default function NavBar() {
       </header>
 
       {/* Overlay */}
-      <OffCanvasAnimation show={isShown}>
+      <OffCanvasAnimation show={isShown && target === "nav"}>
         <Overlay>
           <div className="flex flex-col w-full h-full space-y-8">
             {/* Home */}
