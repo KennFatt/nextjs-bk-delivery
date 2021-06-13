@@ -3,8 +3,7 @@ import { fetchData, transformData } from "@/lib/data-handler";
 
 import MenuContainer from "@/components/MenuContainer";
 
-export default function ProductPage(props) {
-  const { menuList, productDetail } = props;
+export default function ProductPage({ menuList, productDetail }) {
   const [productQuantity, setProductQuantity] = useState(1);
 
   const quantityButtonHandler = (action) => {

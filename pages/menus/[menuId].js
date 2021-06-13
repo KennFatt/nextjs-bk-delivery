@@ -6,8 +6,7 @@ import DisplayCard from "@/components/DisplayCard";
 
 // TODO: both this page and `/menus` share the exact same similarity
 // find out how to eliminate and prevent code duplication
-export default function MenuPage(props) {
-  const { selectedMenu, menuList } = props;
+export default function MenuPage({ selectedMenu, menuList }) {
   const [searchValue, setSearchValue] = useState("");
 
   const onSearch = (lowerCasedValue) => {
