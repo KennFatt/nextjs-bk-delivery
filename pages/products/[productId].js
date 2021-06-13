@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { fetchData, transformData } from "@/lib/data-handler";
 
 import MenuContainer from "@/components/MenuContainer";
+import FallbackContainer from "@/components/FallbackContainer";
 
 export default function ProductPage({ menuList, productDetail }) {
+  const router = useRouter();
   const [productQuantity, setProductQuantity] = useState(1);
+
+  if (router.isFallback) {
+    return <FallbackContainer />;
+  }
 
   const quantityButtonHandler = (action) => {
     return () => {
@@ -107,7 +114,7 @@ export async function getStaticPaths() {
 
   return {
     paths: productIds,
-    fallback: false,
+    fallback: true,
   };
 }
 

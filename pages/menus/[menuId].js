@@ -1,13 +1,20 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { transformData, fetchData } from "@/lib/data-handler";
 
+import FallbackContainer from "@/components/FallbackContainer";
 import MenuContainer from "@/components/MenuContainer";
 import DisplayCard from "@/components/DisplayCard";
 
 // TODO: both this page and `/menus` share the exact same similarity
 // find out how to eliminate and prevent code duplication
 export default function MenuPage({ selectedMenu, menuList }) {
+  const router = useRouter();
   const [searchValue, setSearchValue] = useState("");
+
+  if (router.isFallback) {
+    return <FallbackContainer />;
+  }
 
   const onSearch = (lowerCasedValue) => {
     setSearchValue(lowerCasedValue);
@@ -44,7 +51,7 @@ export async function getStaticPaths() {
 
   return {
     paths: menuIds,
-    fallback: false,
+    fallback: true,
   };
 }
 
