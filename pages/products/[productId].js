@@ -2,23 +2,15 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { fetchData, transformData } from "@/lib/data-handler";
 
-import Container from "@/components/Container";
 import MenuContainer from "@/components/MenuContainer";
+import FallbackContainer from "@/components/FallbackContainer";
 
 export default function ProductPage({ menuList, productDetail }) {
   const router = useRouter();
   const [productQuantity, setProductQuantity] = useState(1);
 
   if (router.isFallback) {
-    return (
-      <Container>
-        <div className="flex items-center justify-center min-h-[calc(100vh-6.75rem)]">
-          <h2 className="font-primary text-branding-accent-secondary animate-pulse text-2xl">
-            Loading...
-          </h2>
-        </div>
-      </Container>
-    );
+    return <FallbackContainer />;
   }
 
   const quantityButtonHandler = (action) => {
@@ -120,7 +112,6 @@ export async function getStaticPaths() {
     ({ id }) => ({ params: { productId: id } })
   );
 
-  console.log("ProductPage: getStaticPaths -> successfully generate pages");
   return {
     paths: productIds,
     fallback: true,
@@ -130,7 +121,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const data = await fetchData();
   if (!data) {
-    console.log("ProductPage: getStaticProps -> fetched empty data");
     return { notFound: true };
   }
 
@@ -140,9 +130,6 @@ export async function getStaticProps(context) {
     ({ id }) => context.params.productId === id
   );
   if (!productDetail) {
-    console.log(
-      `ProductPage: getStaticProps -> couldn't find the product detail of ${context.params.productId}`
-    );
     return { notFound: true };
   }
 
@@ -152,9 +139,6 @@ export async function getStaticProps(context) {
       : { id, displayName };
   });
 
-  console.log(
-    "ProductPage: getStaticProps -> successfully deliver props to the page"
-  );
   return {
     props: { menuList, productDetail },
     revalidate: 60,
