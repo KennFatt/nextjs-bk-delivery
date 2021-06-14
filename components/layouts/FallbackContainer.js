@@ -1,4 +1,4 @@
-import Container from "./Container";
+import Container from "@/components/layouts/Container";
 
 export default function FallbackContainer() {
   return (

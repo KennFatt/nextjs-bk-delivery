@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import Container from "./Container";
-import SearchBox from "./SearchBox";
-import MenuToggleButton from "./MenuToggleButton";
-import MenuSelectorButton from "./MenuSelectorButton";
-import MenuSelectorItem from "./MenuSelectorItem";
-import Overlay from "./Overlay";
 import { ToggleOverlayContext } from "@/contexts/overlay-context";
+import MenuToggleButton from "@/components/buttons/MenuToggleButton";
+import MenuSelectorButton from "@/components/buttons/MenuSelectorButton";
+import Container from "@/components/layouts/Container";
+import Overlay from "@/components/sections/Overlay";
+import SearchBox from "@/components/widgets/SearchBox";
+import MenuSelectorItem from "@/components/widgets/MenuSelectorItem";
 
 export default function MenuContainer({
   title,

@@ -1,5 +1,5 @@
-import Container from "@/components/Container";
-import AccountForm from "@/components/AccountForm";
+import Container from "@/components/layouts/Container";
+import AccountForm from "@/components/sections/AccountForm";
 
 export default function ResetPasswordPage() {
   const onSendButtonClicked = (ev) => {

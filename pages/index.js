@@ -1,7 +1,7 @@
 import { fetchData, transformData } from "@/lib/data-handler";
 
-import DisplayCard from "@/components/DisplayCard";
-import Container from "@/components/Container";
+import DisplayCard from "@/components/widgets/DisplayCard";
+import Container from "@/components/layouts/Container";
 
 export default function Home({ menusItem }) {
   return (

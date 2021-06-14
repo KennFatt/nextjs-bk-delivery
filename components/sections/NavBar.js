@@ -1,17 +1,15 @@
 import Link from "next/link";
 import { useContext } from "react";
 
-import HamburgerMenuButton from "./items/HamburgerMenuButton";
-import ShoppingCart from "./items/ShoppingCart";
-import NavLinkHome from "./items/NavLinkHome";
-import NavLinkLogin from "./items/NavLinkLogin";
-import NavLinkMenus from "./items/NavLinkMenus";
-import NavLinkPromotions from "./items/NavLinkPromotions";
-
-import Overlay from "@/components/Overlay";
+import { ToggleOverlayContext } from "@/contexts/overlay-context";
 import OffCanvasAnimation from "@/components/animations/OffCanvasAnimation";
-
-import { ToggleOverlayContext } from "contexts/overlay-context";
+import HamburgerMenuButton from "@/components/buttons/HamburgerMenuButton";
+import Overlay from "@/components/sections/Overlay";
+import ShoppingCart from "@/components/widgets/ShoppingCart";
+import NavLinkHome from "@/components/widgets/NavLinkHome";
+import NavLinkLogin from "@/components/widgets/NavLinkLogin";
+import NavLinkMenus from "@/components/widgets/NavLinkMenus";
+import NavLinkPromotions from "@/components/widgets/NavLinkPromotions";
 
 export default function NavBar() {
   const { isShown, target, toggleOverlay } = useContext(ToggleOverlayContext);

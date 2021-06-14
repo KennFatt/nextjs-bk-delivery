@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write \"./pages/**/*.{js,jsx}\" \"./components/**/*.{js,jsx}\" \"./lib/**/*.{js,jsx}\""
+    "redev": "rm -rf .next && next dev",
+    "format": "prettier --write \"./pages/**/*.{js,jsx}\" \"./components/**/*.{js,jsx}\" \"./contexts/**/*.{js,jsx}\" \"./lib/**/*.{js,jsx}\" \"./styles/**/*.{css,scss,sass}\""
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",

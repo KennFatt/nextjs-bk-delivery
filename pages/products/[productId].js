@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { fetchData, transformData } from "@/lib/data-handler";
 
-import MenuContainer from "@/components/MenuContainer";
-import FallbackContainer from "@/components/FallbackContainer";
+import MenuContainer from "@/components/layouts/MenuContainer";
+import FallbackContainer from "@/components/layouts/FallbackContainer";
 
 export default function ProductPage({ menuList, productDetail }) {
   const router = useRouter();

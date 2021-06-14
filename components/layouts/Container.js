@@ -1,8 +1,8 @@
 import Head from "next/head";
 
 import { ToggleOverlayProvider } from "@/contexts/overlay-context";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "@/components/sections/NavBar";
+import Footer from "@/components/sections/Footer";
 
 export default function Container({ title, description, ...props }) {
   const meta = {

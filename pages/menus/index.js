@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { fetchData, transformData } from "@/lib/data-handler";
 
-import MenuContainer from "@/components/MenuContainer";
-import DisplayCard from "@/components/DisplayCard";
+import MenuContainer from "@/components/layouts/MenuContainer";
+import DisplayCard from "@/components/widgets/DisplayCard";
 
 export default function MenuIndexPage({ selectedMenu, menuList }) {
   const [searchValue, setSearchValue] = useState("");

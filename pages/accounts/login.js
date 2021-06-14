@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import Container from "@/components/Container";
-import AccountForm from "@/components/AccountForm";
+import Container from "@/components/layouts/Container";
+import AccountForm from "@/components/sections/AccountForm";
 
 export default function LoginPage() {
   const onLoginButtonClicked = (ev) => {
