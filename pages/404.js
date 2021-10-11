@@ -7,7 +7,7 @@ export default function PageNotFound() {
         UH-OH!
       </h1>
       <h2 className="font-primary text-branding-accent-primary-darker md:text-3xl">
-        WE COULDN'T FIND THE PAGE
+        WE COULDN&#39;T FIND THE PAGE
       </h2>
       <p className="font-secondary md:my-8 md:text-lg my-4 text-sm text-center text-gray-500">
         The URL might be incorrect or it does not exist anymore

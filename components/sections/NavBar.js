@@ -36,6 +36,7 @@ export default function NavBar() {
           <Link href="/">
             <a>
               <img
+                alt="BKDelivery's Clone"
                 className="w-10 h-10"
                 src="https://bkdelivery.co.id/static/website/img/BK_TopLogo1x.df8014631c65.png"></img>
             </a>
@@ -54,6 +55,7 @@ export default function NavBar() {
               <Link href="/">
                 <a>
                   <img
+                    alt="BKDelivery's Clone"
                     className="w-full h-full"
                     src="https://bkdelivery.co.id/static/website/img/BK_TopLogo1x.df8014631c65.png"></img>
                 </a>

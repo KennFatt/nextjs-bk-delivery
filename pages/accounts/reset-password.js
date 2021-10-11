@@ -14,7 +14,7 @@ export default function ResetPasswordPage() {
           Forget Password
         </h2>
         <p className="px-9 mt-4">
-          Please fill in your email address below and we'll send you an email
+          Please fill in your email address below and we&#39;ll send you an email
           with instructions on how to reset your password.{" "}
         </p>
 
